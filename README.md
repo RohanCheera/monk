@@ -1,141 +1,204 @@
-//start of jonathanirvings' template v3.0.3 (BETA)
-```
-#include <bits/stdc++.h>
-using namespace std;
+Let's consolidate all these algorithms into one comprehensive roadmap for your Data Structures and Algorithms (DSA) study plan:
 
-typedef long long LL;
-typedef pair<int,int> pii;
-typedef pair<LL,LL> pll;
-typedef pair<string,string> pss;
-typedef vector<int> vi;
-typedef vector<vi> vvi;
-typedef vector<pii> vii;
-typedef vector<LL> vl;
-typedef vector<vl> vvl;
+---
 
-double EPS = 1e-9;
-int INF = 1000000005;
-long long INFF = 1000000000000000005LL;
-double PI = acos(-1);
-int dirx[8] = {-1,0,0,1,-1,-1,1,1};
-int diry[8] = {0,1,-1,0,-1,1,-1,1};
+## 1. Sorting Algorithms (10)
+- **Bubble Sort**
+- **Selection Sort**
+- **Insertion Sort**
+- **Merge Sort**
+- **Quick Sort**
+- **Heap Sort**
+- **Counting Sort**
+- **Radix Sort**
+- **Bucket Sort**
+- **Shell Sort**
 
-#ifdef TESTING
-  #define DEBUG fprintf(stderr,"====TESTING====\n")
-  #define VALUE(x) cerr << "The value of " << #x << " is " << x << endl
-  #define debug(...) fprintf(stderr, __VA_ARGS__)
-#else
-  #define DEBUG 
-  #define VALUE(x)
-  #define debug(...)
-#endif
+## 2. Searching Algorithms (6)
+- **Linear Search**
+- **Binary Search**
+- **Ternary Search**
+- **Exponential Search**
+- **Interpolation Search**
+- **Fibonacci Search**
 
-#define FOR(a,b,c) for (int (a)=(b);(a)<(c);++(a))
-#define FORN(a,b,c) for (int (a)=(b);(a)<=(c);++(a))
-#define FORD(a,b,c) for (int (a)=(b);(a)>=(c);--(a))
-#define FORSQ(a,b,c) for (int (a)=(b);(a)*(a)<=(c);++(a))
-#define FORC(a,b,c) for (char (a)=(b);(a)<=(c);++(a))
-#define FOREACH(a,b) for (auto &(a) : (b))
-#define REP(i,n) FOR(i,0,n)
-#define REPN(i,n) FORN(i,1,n)
-#define MAX(a,b) a = max(a,b)
-#define MIN(a,b) a = min(a,b)
-#define SQR(x) ((LL)(x) * (x))
-#define RESET(a,b) memset(a,b,sizeof(a))
-#define fi first
-#define se second
-#define mp make_pair
-#define pb push_back
-#define ALL(v) v.begin(),v.end()
-#define ALLA(arr,sz) arr,arr+sz
-#define SIZE(v) (int)v.size()
-#define SORT(v) sort(ALL(v))
-#define REVERSE(v) reverse(ALL(v))
-#define SORTA(arr,sz) sort(ALLA(arr,sz))
-#define REVERSEA(arr,sz) reverse(ALLA(arr,sz))
-#define PERMUTE next_permutation
-#define TC(t) while(t--)
+## 3. Graph Algorithms (15)
+- **Breadth-First Search (BFS)**
+- **Depth-First Search (DFS)**
+- **Dijkstra’s Algorithm**
+- **Bellman-Ford Algorithm**
+- **Floyd-Warshall Algorithm**
+- **Prim’s Algorithm**
+- **Kruskal’s Algorithm**
+- **Tarjan’s Algorithm (SCC)**
+- **Kosaraju’s Algorithm (SCC)**
+- **Topological Sorting (Kahn’s & DFS)**
+- **Eulerian Path and Circuit**
+- **Hamiltonian Cycle (Backtracking)**
+- **Articulation Points and Bridges**
+- **Bipartite Graph Checking**
+- **A* Search Algorithm**
 
-inline string IntToString(LL a){
-  char x[100];
-  sprintf(x,"%lld",a); string s = x;
-  return s;
-}
+## 4. Dynamic Programming (DP) (15)
+- **Fibonacci Series (Top-down & Bottom-up)**
+- **Longest Common Subsequence (LCS)**
+- **Longest Palindromic Subsequence**
+- **Longest Increasing Subsequence**
+- **Edit Distance**
+- **Knapsack Problem (0/1 & Unbounded)**
+- **Coin Change Problem**
+- **Matrix Chain Multiplication**
+- **Subset Sum Problem**
+- **Rod Cutting Problem**
+- **Egg Dropping Puzzle**
+- **Wildcard Matching**
+- **Minimum Path Sum in Grid**
+- **Partition Equal Subset Sum**
+- **Palindrome Partitioning**
 
-inline LL StringToInt(string a){
-  char x[100]; LL res;
-  strcpy(x,a.c_str()); sscanf(x,"%lld",&res);
-  return res;
-}
+## 5. Tree Algorithms (12)
+- **Binary Tree Traversals (Preorder, Inorder, Postorder)**
+- **Level Order Traversal**
+- **Lowest Common Ancestor (LCA)**
+- **Diameter of a Tree**
+- **Maximum Path Sum**
+- **Morris Traversal**
+- **Construct Tree from Inorder & Preorder/Postorder**
+- **AVL Tree (Insertion & Deletion)**
+- **Trie (Prefix Tree) Operations**
+- **Segment Tree (Range Sum & Min/Max Queries)**
+- **Fenwick Tree (BIT)**
+- **Splay Tree**
 
-inline string GetString(void){
-  char x[1000005];
-  scanf("%s",x); string s = x;
-  return s;
-}
+## 6. Heap & Priority Queue (6)
+- **Min Heap & Max Heap Operations**
+- **Kth Largest & Smallest Element**
+- **Merge K Sorted Lists**
+- **Median in a Stream**
+- **Top K Frequent Elements**
+- **Dijkstra’s Algorithm (using Priority Queue)**
 
-inline string uppercase(string s){
-  int n = SIZE(s); 
-  REP(i,n) if (s[i] >= 'a' && s[i] <= 'z') s[i] = s[i] - 'a' + 'A';
-  return s;
-}
+## 7. Bit Manipulation (6)
+- **Check if a Number is Power of 2**
+- **Count Set Bits**
+- **XOR of all numbers from 1 to N**
+- **Find the Single Number in a Pairwise XOR Array**
+- **Swap Two Numbers Without Temporary Variable**
+- **Bitmask DP**
 
-inline string lowercase(string s){
-  int n = SIZE(s); 
-  REP(i,n) if (s[i] >= 'A' && s[i] <= 'Z') s[i] = s[i] - 'A' + 'a';
-  return s;
-}
+## 8. String Algorithms (10)
+- **KMP (Knuth-Morris-Pratt) Pattern Matching**
+- **Rabin-Karp Algorithm**
+- **Z-Algorithm**
+- **Manacher’s Algorithm (Longest Palindromic Substring)**
+- **Aho-Corasick Algorithm (Multiple Pattern Matching)**
+- **Trie Data Structure (Insert, Search, Delete)**
+- **Suffix Array & Suffix Tree**
+- **Longest Repeating Subsequence**
+- **Boyer-Moore Algorithm**
+- **Rolling Hash**
 
-inline void OPEN (string s) {
-  #ifndef TESTING
-  freopen ((s + ".in").c_str (), "r", stdin);
-  freopen ((s + ".out").c_str (), "w", stdout);
-  #endif
-}
+## 9. Number Theory & Mathematics (10)
+- **Sieve of Eratosthenes (Prime Numbers)**
+- **Euclidean Algorithm (GCD & LCM)**
+- **Modular Exponentiation**
+- **Extended Euclidean Algorithm**
+- **Chinese Remainder Theorem**
+- **Wilson’s Theorem**
+- **Euler’s Totient Function**
+- **Fast Exponentiation**
+- **Fermat’s Theorem**
+- **Miller-Rabin Primality Test**
 
-#ifdef TESTING
-int main() {}
-#endif
+## 10. Greedy Algorithms (10)
+- **Activity Selection Problem**
+- **Huffman Coding**
+- **Job Scheduling Problem**
+- **Fractional Knapsack Problem**
+- **Dijkstra’s Algorithm**
+- **Kruskal’s Algorithm**
+- **Prim’s Algorithm**
+- **Coin Change (Greedy Approach)**
+- **Optimal Merge Pattern**
+- **Interval Scheduling Maximization**
 
-//end of jonathanirvings' template v3.0.3 (BETA)
+## 11. Advanced Graph Algorithms (6)
+- **Binary Lifting**
+- **Bridge Finding & Cut Vertex**
+- **Euler Tour Technique**
+- **Heavy-Light Decomposition (HLD)**
+- **Centroid Decomposition**
+- **2-SAT Problem Solving**
 
-int pre[100005];
-int suf[100005];
+## 12. Advanced Dynamic Programming (5)
+- **Bitmask DP**
+- **Digit DP**
+- **Divide and Conquer DP**
+- **Sparse Table**
+- **DP on Trees**
 
-class Solution {
-public:
-  int maxFreeTime(int eventTime, vector<int>& startTime, vector<int>& endTime) {
-    int now = 0;
-    int n = SIZE(startTime);
-    vi kosong;
-    REP(i,n)
-    {
-      kosong.pb(startTime[i] - now);
-      now = endTime[i];
-    }
-    kosong.pb(eventTime - now);
+## 13. Advanced Mathematical Algorithms (10)
+- **Matrix Exponentiation**
+- **Pigeonhole Principle Applications**
+- **Factorial of Large Numbers**
+- **Modular Inverse**
+- **Lucas Theorem**
+- **Burnside’s Lemma**
+- **Catalan Numbers**
+- **Josephus Problem**
+- **Gray Code Generation**
+- **Möbius Function & Inversion**
 
-    int m = SIZE(kosong);
-    pre[0] = kosong[0];
-    FOR(i,1,m) pre[i] = max(pre[i-1],kosong[i]);
-    suf[m-1] = kosong[m-1];
-    FORD(i,m-2,0) suf[i] = max(suf[i+1],kosong[i]);
+## 14. Advanced Number Theory (6)
+- **Discrete Logarithm Problem**
+- **Gaussian Elimination for Modular Arithmetic**
+- **Totient Function for Large Numbers**
+- **Binary Exponentiation**
+- **Fibonacci using Matrix Exponentiation**
+- **Chinese Remainder Theorem**
 
-    // REP(i,SIZE(kosong)) printf("%d %d\n",i,kosong[i]);
+## 15. Advanced Data Structures (6)
+- **Persistent Segment Tree**
+- **Splay Tree**
+- **Link-Cut Tree**
+- **Heavy-Light Decomposition with Segment Trees**
+- **Dancing Links**
+- **Van Emde Boas Tree**
 
-    int risan = 0;
-    REP(i,SIZE(kosong)-1) MAX(risan,kosong[i]+kosong[i+1]);
-    REP(i,n)
-    {
-      int cek = 0;
-      if (i - 1 >= 0) MAX(cek,pre[i-1]);
-      if (i + 2 < m) MAX(cek,suf[i+2]);
-      // printf("%d %d\n",i,cek);
-      if (cek >= endTime[i] - startTime[i])
-        MAX(risan,kosong[i]+kosong[i+1]+endTime[i]-startTime[i]);
-    }
+## 16. Computational Geometry (5)
+- **Convex Hull**
+- **Line Sweep Algorithm**
+- **Closest Pair of Points**
+- **Polygon Triangulation**
+- **Rotating Calipers**
 
-    return risan;
-  }
-};
-```
+## 17. Game Theory Algorithms (4)
+- **Sprague-Grundy Theorem**
+- **Minimax Algorithm**
+- **Alpha-Beta Pruning**
+- **Nash Equilibrium**
+
+## 18. Randomized Algorithms (4)
+- **Reservoir Sampling**
+- **Randomized QuickSort**
+- **Monte Carlo & Las Vegas Algorithms**
+- **Treap**
+
+## 19. Approximation & Heuristic Algorithms (4)
+- **Simulated Annealing**
+- **Genetic Algorithms**
+- **Markov Chains & Random Walks**
+- **Ant Colony Optimization**
+
+## 20. Miscellaneous Advanced Algorithms
+- **Meet-in-the-Middle Algorithms**
+- **KMP Automaton**
+- **Floyd’s Cycle Detection Algorithm**
+- **Simpson’s Rule**
+- **Stoer-Wagner Algorithm**
+- **Karger’s Algorithm**
+
+---
+
+This comprehensive roadmap covers a wide range of algorithms essential for mastering DSA.
+
